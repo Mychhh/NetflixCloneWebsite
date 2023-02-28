@@ -9,7 +9,7 @@ function Row({ title, fetchUrl, isLargeRow }) {
     // A snippet of code which runs based on a specific condition/variable
 
     useEffect(() => {
-        //
+        //Async await function
         async function fetchData() {
             const request = await axios.get(fetchUrl);
             setMovies(request.data.results);
@@ -18,7 +18,7 @@ function Row({ title, fetchUrl, isLargeRow }) {
         fetchData();
     }, [fetchUrl]);
 
-    console.log(movies)
+    // console.log(movies)
 
     return (
         <div className='row'>
